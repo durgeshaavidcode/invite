@@ -17,12 +17,14 @@
   --sat: 66%;
   --lig: 75%;
   --second-hue: 219;
+  --third-hue: 356;
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
   --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
   --body-color: hsl(var(--second-hue), 48%, 8%);
+  --text-color-pink: #e24a90;
   --container-color: hsl(var(--second-hue), 32%, 12%);
 
   /*========== Font and typography ==========*/
@@ -973,7 +975,7 @@ body.light-theme {
 
 .footer__title,
 .footer__link {
-  color: var(--body-color);
+  color: var(--text-color-pink);
 }
 
 .footer__title {
