@@ -341,6 +341,7 @@ body.light-theme {
   display: block;
   color: var(--title-color);
   margin-bottom: 0.25rem;
+  color: #ff850f;
 }
 
 .home__greeting--title {
