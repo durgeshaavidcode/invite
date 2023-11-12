@@ -54,14 +54,15 @@
       // Get the language code from the query parameter
       const urlParams = new URLSearchParams(window.location.search);
       const lang = urlParams.get("lang");
-  
+
       if (lang === 'hn') {
         showHindiText(); // Load the language
       } else {
         showEnglishText(); // For example, English ("en")
       }
     }
-</script>
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 </head>
 
 <body onload="loadLanguage()">
@@ -82,7 +83,7 @@
           </li>
 
           <li class="nav__item">
-            <a href="#about" class="nav__link">
+            <a href="#location" class="nav__link">
               <i class="bx bx-map"></i>
               <span class="section__subtitle nav__link--title en">Location</span>
               <span class="section__subtitle nav__link--title hn">जगह</span>
@@ -154,7 +155,7 @@
         </div>
 
         <div class="home__social">
-          <a href="#about" class="home__social-link">
+          <a href="#location" class="home__social-link">
             <i class="bx bxs-map"></i>
           </a>
           <a href="#contact" class="home__social-link">
@@ -168,7 +169,8 @@
             <span class="home__social-link-icon en"><i class="bx bxs-volume-mute"></i></span>
             <span class="home__social-link-icon hn"><i class="bx bxs-volume-mute"></i></span>
           </button>
-          <a href="assets/video/marathi.mp4" target="_blank" class="home__social-link" style="visibility: hidden; width: 0%">
+          <a href="assets/video/marathi.mp4" target="_blank" class="home__social-link"
+            style="visibility: hidden; width: 0%">
             <video id="musicplayer" width="100%" loop controls muted autoplay>
               <source src="assets/video/marathi.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -176,7 +178,7 @@
           </a>
         </div>
 
-        <a href="#about" class="home__scroll">
+        <a href="#location" class="home__scroll">
           <span class="home__scroll-name en">Durgesh 🤍 Mamta</span>
           <span class="home__scroll-name hn">चि. दुर्गेश 🤍 सु.क. ममता</span>
           <!-- <i class='bx bx-mouse home__scroll-icon'></i> -->
@@ -186,7 +188,7 @@
     </section>
 
     <!--=============== Location ===============-->
-    <section class="about section" id="about">
+    <section class="about section" id="location">
       <span class="section__subtitle en">The only thing that's missing is you!</span>
       <span class="section__subtitle hn">बस कमी है तो आपकी!</span>
       <h2 class="section__title en">Ceremony Location</h2>
@@ -295,17 +297,14 @@
           </div>
 
           <div class="services__modal">
-            <div class="services__modal-content" style="height: 100%; overflow: auto">
+            <div class="services__modal-content">
               <i class="bx bx-x services__modal-close"></i>
 
               <h3 class="services__modal-title en">Invitation Card</h3>
               <h3 class="services__modal-title hn">निमंत्रण पत्र</h3>
-              <object data="assets/pdf/invitation.pdf" type="application/pdf" width="100%" height="80%">
-                <p>
-                  Your web browser doesn't have a PDF plugin. Instead you can
-                  <a href="assets/pdf/invitation.pdf">click here to download the PDF file.</a>
-                </p>
-              </object>
+              <a data-fancybox="gallery" data-src="assets/img/durgesh-invitation.jpg">
+                <img src="assets/img/durgesh-invitation.jpg" />
+              </a>
             </div>
           </div>
         </div>
@@ -429,10 +428,10 @@
                 <h4 class="hn">ममता परिवार:</h4>
                 <ul>
                   <li>
-                    <span class="en">Kedar Yadav</span><span class="hn">स्व. केदार यादव</span>
+                    <span class="en">lt. Kedar Yadav</span><span class="hn">स्व. केदार यादव</span>
                   </li>
                   <li>
-                    <span class="en">Kamaladevi Yadav</span><span class="hn">स्व. कमलादेवी यादव</span>
+                    <span class="en">lt. Kamaladevi Yadav</span><span class="hn">स्व. कमलादेवी यादव</span>
                   </li>
                   <li>
                     <span class="en">Kalavati Yadav</span><span class="hn">कलावती यादव</span>
@@ -470,17 +469,19 @@
           <img src="assets/img/haldi-preview.png" style="margin-top: 1.25rem" alt="" class="work__img" />
 
           <h3 class="work__title en">
-            The Haldi ceremony <br> is planned for 27th November <br> at the Bandra Hindu Association, <br> starting at 8 pm <br> and continuing onwards.
+            The Haldi ceremony <br> is planned for 27th November <br> at <a style="color: #a395e9;" target="_blank" href="https://maps.app.goo.gl/VbWVGr7V5CLJLpWg7" title="open in google map">the Bandra Hindu Association</a>, <br> starting at
+            8 pm <br> and continuing onwards.
           </h3>
           <h3 class="work__title hn">
-            हल्दी समारोह <br> 27 नवंबर को रात 8 बजे से <br> बांद्रा हिंदू एसोसिएशन में है।
+            हल्दी समारोह <br> 27 नवंबर को रात 8 बजे से <br>  <a  style="color: #a395e9;" target="_blank" href="https://maps.app.goo.gl/VbWVGr7V5CLJLpWg7" title="गूगल मैप में खोलें">बांद्रा हिंदू एसोसिएशन </a> में है।
           </h3>
         </div>
         <div class="work__card mix movil">
           <img src="assets/img/reception-preview.png" alt="" class="work__img" />
 
           <h3 class="work__title en">
-            Varmala & Reception Ceremony <br /> to begin from 8 pm onwards <br />at Shri Jamnadas <br />Adukia Balika Vidyalay <br /> on 28 November.
+            Varmala & Reception Ceremony <br /> to begin from 8 pm onwards <br />at Shri Jamnadas <br />Adukia Balika
+            Vidyalay <br /> on 28 November.
           </h3>
           <h3 class="work__title hn">
             वरमाला एवं स्वागत समारोह,<br> 28 नवंबर को शाम 8 बजे से शुरू होगा <br>श्री जमनादास अडुकिया बालिका विद्यालय।
@@ -490,10 +491,12 @@
         <div class="work__card mix design">
           <img src="assets/img/wedding-preview.png" alt="" class="work__img" />
           <h3 class="work__title en">
-            The Wedding Ceremony <br />will commence at 11:45 pm onwards<br /> at Shri Jamnadas<br /> Adukia Balika Vidyalay<br /> on 28th November.
+            The Wedding Ceremony <br />will commence at 11:45 pm onwards<br /> at Shri Jamnadas<br /> Adukia Balika
+            Vidyalay<br /> on 28th November.
           </h3>
           <h3 class="work__title hn">
-            विवाह समारोह <br /> 28 नवंबर को रात 11:45 बजे <br /> श्री जमनादास अडुकिया बालिका <br />विद्यालय में शुरू होगा।
+            विवाह समारोह <br /> 28 नवंबर को रात 11:45 बजे <br /> श्री जमनादास अडुकिया बालिका <br />विद्यालय में शुरू
+            होगा।
           </h3>
         </div>
 
@@ -661,12 +664,16 @@
           <p class="testimonial__description" style="margin-bottom: 1.15rem">
             <span class="section__subtitle en">Radheshyam Yadav</span>
             <span class="section__subtitle hn">राधेश्याम यादव</span>
-            <span class="en"><i class="bx bx-map"> </i> Bhuwarpur, Taluk Saidpur, District Ghazipur, UttarPradesh 233307.</span><span class="hn"><i class="bx bx-map"> </i> भुवरपुर, तालुक सैदपुर, जिला ग़ाज़ीपुर, उत्तर प्रदेश 233307।</span>
+            <span class="en"><i class="bx bx-map"> </i> Bhuwarpur, Taluk Saidpur, District Ghazipur, UttarPradesh
+              233307.</span><span class="hn"><i class="bx bx-map"> </i> भुवरपुर, तालुक सैदपुर, जिला ग़ाज़ीपुर, उत्तर
+              प्रदेश 233307।</span>
           </p>
           <p class="testimonial__description" style="margin-bottom: 1.15rem">
             <span class="section__subtitle en">lt. Kedar Yadav</span>
             <span class="section__subtitle hn">स्व. केदार यादव</span>
-            <span class="en"><i class="bx bx-map"> </i> Village Dingarpur / Dhanarbandh, Post Badora, District Azamgarh, Uttar Pradesh 276128.</span><span class="hn"><i class="bx bx-map"> </i> ग्राम डींगरपुर/धनारबांध, पोस्ट बदौरा, जिला आज़मगढ़, उत्तर प्रदेश 276128।</span>
+            <span class="en"><i class="bx bx-map"> </i> Village Dingarpur / Dhanarbandh, Post Badora, District Azamgarh,
+              Uttar Pradesh 276128.</span><span class="hn"><i class="bx bx-map"> </i> ग्राम डींगरपुर/धनारबांध, पोस्ट
+              बड़ौरा, जिला आज़मगढ़, उत्तर प्रदेश 276128।</span>
           </p>
         </div>
       </div>
@@ -679,7 +686,8 @@
       <!-- <img class="flower-1" src="assets/img/bottom-right-1.svg">
         <img class="flower-1" src="assets/img/bottom-left-1.svg"> -->
       <h1 class="footer__title">
-        <span class="en">Durgesh</span><span class="hn">दुर्गेश</span><img src="assets/t.png" width="40" style="margin: 0.5rem;" /><span class="en">Mamta</span><span class="hn">ममता</span>
+        <span class="en">Durgesh</span><span class="hn">दुर्गेश</span><img src="assets/t.png" width="40"
+          style="margin: 0.5rem;" /><span class="en">Mamta</span><span class="hn">ममता</span>
       </h1>
       <!-- <img class="footer__title" src="assets/t.png" alt="Durgesh & Mamta"> -->
     </div>
@@ -692,6 +700,12 @@
 
   <!--=============== MAIN JS ===============-->
   <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+    Fancybox.bind('[data-fancybox="gallery"]', {
+      //
+    });    
+  </script>
 </body>
 
 </html>
