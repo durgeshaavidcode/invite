@@ -235,10 +235,10 @@
                 </form>
                 <div style="padding-left: 1rem">
                   <a href="#contact" class="button about__button-contact en">
-                    Contact Me
+                    Contact Us
                   </a>
                   <a href="#contact" class="button about__button-contact hn">
-                    मुझसे संपर्क करें
+                    संपर्क करें
                   </a>
                 </div>
               </div>
@@ -249,19 +249,21 @@
             <div class="testimonial__container container swiper">
               <div class="swiper-wrapper">
                 <div class="testimonial__card swiper-slide">
-                  <img src="assets/img/hall1.jpg" alt="" class="testimonial__img" />
+                  <a data-fancybox="gallery" data-src="assets/img/hall1.jpg">
+                    <img src="assets/img/hall1.jpg" class="testimonial__img" />
+                  </a>
 
                   <!-- <h3 class="testimonial__name">Jhon Doe</h3> -->
                 </div>
                 <div class="testimonial__card swiper-slide">
-                  <img src="assets/img/talao.jpg" alt="" class="testimonial__img" />
+                  <a data-fancybox="gallery" data-src="assets/img/talao.jpg">
+                    <img src="assets/img/talao.jpg" class="testimonial__img" />
+                  </a>
                 </div>
                 <div class="testimonial__card swiper-slide">
-                  <img src="assets/img/nl.jpg" alt="" class="testimonial__img" />
-
-                  <!-- <p class="testimonial__description">
-                                        <i class='bx bxs-map'></i> <b>National Library,</b> Swami Vivekananda Rd, S.V. Road, Bandra West, Mumbai, Maharashtra 400050
-                                    </p> -->
+                  <a data-fancybox="gallery" data-src="assets/img/nl.jpg">
+                    <img src="assets/img/nl.jpg" class="testimonial__img" />
+                  </a>
                 </div>
               </div>
               <div class="swiper-pagination"></div>
@@ -387,6 +389,17 @@
                   <p class="services__modal-info en">Bride Mamta Yadav.</p>
                   <p class="services__modal-info hn">दुल्हन ममता यादव |</p>
                 </li>
+                <li class="services__modal-item">
+                  <i class="bx bx-check-circle"></i>
+                  <p class="services__modal-info en">Haldi ceremony from 7pm onwards at Bandra Hindu
+                    Association.</p>
+                  <p class="services__modal-info hn">हल्दी समारोह शाम 7 बजे से बांद्रा हिंदू एसोसिएशन में।</p>
+                </li>
+                <li class="services__modal-item">
+                  <i class="bx bx-check-circle"></i>
+                  <p class="services__modal-info en">Auspicious marriage: Tuesday. 28 November 2023 from 8pm onward.                  </p>
+                  <p class="services__modal-info hn">शुभ लग्न: मंगलवार। 28 नवंबर 2023 रात्रि 8 बजे से।</p>
+                </li>
               </ul>
             </div>
           </div>
@@ -469,11 +482,15 @@
           <img src="assets/img/haldi-preview.png" style="margin-top: 1.25rem" alt="" class="work__img" />
 
           <h3 class="work__title en">
-            The Haldi ceremony <br> is planned for 27th November <br> at <a style="color: #a395e9;" target="_blank" href="https://maps.app.goo.gl/VbWVGr7V5CLJLpWg7" title="open in google map">the Bandra Hindu Association</a>, <br> starting at
-            8 pm <br> and continuing onwards.
+            The Haldi ceremony <br> is planned for 27th November <br> at <a style="color: #a395e9;" target="_blank"
+              href="https://maps.app.goo.gl/VbWVGr7V5CLJLpWg7" title="open in google map">the Bandra Hindu
+              Association</a>, <br> starting at
+            7 pm <br> and continuing onwards.
           </h3>
           <h3 class="work__title hn">
-            हल्दी समारोह <br> 27 नवंबर को रात 8 बजे से <br>  <a  style="color: #a395e9;" target="_blank" href="https://maps.app.goo.gl/VbWVGr7V5CLJLpWg7" title="गूगल मैप में खोलें">बांद्रा हिंदू एसोसिएशन </a> में है।
+            हल्दी समारोह <br> 27 नवंबर को रात 7 बजे से <br> <a style="color: #a395e9;" target="_blank"
+              href="https://maps.app.goo.gl/VbWVGr7V5CLJLpWg7" title="गूगल मैप में खोलें">बांद्रा हिंदू एसोसिएशन </a>
+            में है।
           </h3>
         </div>
         <div class="work__card mix movil">
@@ -499,36 +516,6 @@
             होगा।
           </h3>
         </div>
-
-        <!-- <div class="work__card mix design">
-                    <img src="assets/img/perfile.png" alt="" class="work__img">
-
-                    <h3 class="work__title">Wedding ceremony</h3>
-
-                    <a href="#" class="work__button">
-                        View <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                </div> -->
-
-        <!-- <div class="work__card mix web">
-                    <img src="assets/img/work4.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">Web Design</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix movil">
-                    <img src="assets/img/work5.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">App Movil</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                </div> -->
       </div>
       <div class="dress-code">
         <span class="services__button">
@@ -585,8 +572,8 @@
     <section class="contact section" id="contact">
       <sapn class="section__subtitle en">Get in touch</sapn>
       <sapn class="section__subtitle hn">संपर्क में रहो</sapn>
-      <h3 class="section__title en">Contact Me</h3>
-      <h3 class="section__title hn">मुझसे संपर्क करें</h3>
+      <h3 class="section__title en">Contact Detail</h3>
+      <h3 class="section__title hn">संपर्क विवरण</h3>
 
       <div class="contact__container container grid">
         <div class="contact__content">
